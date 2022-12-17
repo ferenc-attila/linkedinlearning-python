@@ -4,6 +4,6 @@
 for i in range(6, 15):
     print(i)
 
-# Correct answer by LinkedIn Learning:
+# Answer marked as correct by LinkedIn Learning:
 for i in range(6, 16):
     print(i)
