@@ -7,11 +7,9 @@ def clean_text(string_to_test):
 
 
 def is_palindrome(string_to_test):
-    for index_of_character in range(0, (string_to_test.__len__() / 2).__ceil__()):
-        print(string_to_test[index_of_character], "vs.", string_to_test[(index_of_character+1)*-1])
-        if string_to_test[index_of_character] != string_to_test[(index_of_character + 1) * -1]:
-            return False
-    return True
+    if string_to_test == string_to_test[::-1]:
+        return True
+    return False
 
 
 def get_text_from_user():

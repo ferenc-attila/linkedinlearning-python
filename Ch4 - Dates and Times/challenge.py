@@ -13,17 +13,20 @@ def get_number_of_day():
     day = input("? ")
     if day.lower() == "exit":
         print("Thanks for using this software. Good bye!")
-        return day.lower() # Ez talan kicsit csunya, lehet, hogy ezt refaktoralni kellene
-    else:
-        try:
-            index_of_day = int(day)
-        except ValueError as ve:
-            print(ve)
-            index_of_day = -1
-        if index_of_day not in range(0, 7):
-            print("Invalid input. Try a number between zero and six!")
-            get_number_of_day()
-        return index_of_day
+        return day.lower()
+    return get_index_of_day(day)
+
+
+def get_index_of_day(day):
+    try:
+        index_of_day = int(day)
+    except ValueError as ve:
+        print(ve)
+        index_of_day = -1
+    if index_of_day not in range(0, 7):
+        print("Invalid input. Try a number between zero and six!")
+        get_number_of_day()
+    return index_of_day
 
 
 def get_number_of_month():
@@ -46,12 +49,11 @@ def get_number_of_year():
         number_of_year = int(year)
     except ValueError as ve:
         print(ve)
-        number_of_year = -1
-    if number_of_year not in range(-10000, 10000):
-        print("Invalid input. Try a number between -10000 and 10000")
-        get_number_of_year()
-    else:
+        number_of_year = -10001
+    if number_of_year in range(-10000, 10000):
         return number_of_year
+    print("Invalid input. Try a number between -10000 and 10000")
+    get_number_of_year()
 
 
 def day_counter(day, month, year):
