@@ -9,6 +9,7 @@ import shutil
 from shutil import make_archive
 from zipfile import ZipFile
 
+
 def main():
     # make a duplicate of an existing file
     if path.exists("textfile.txt.bak"):
@@ -31,6 +32,7 @@ def main():
             newzip.write("newfile.txt")
             newzip.write("textfile.txt.bak")
             newzip.close() # Ezt ide miért nem tette be?
+
 
 if __name__ == "__main__":
     main()

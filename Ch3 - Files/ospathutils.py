@@ -8,6 +8,8 @@ from os import path
 import datetime
 from datetime import date, time, timedelta
 import time
+
+
 def main():
     # Print the name of the OS
     print(os.name)
@@ -30,6 +32,7 @@ def main():
     td = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime("textfile.txt"))
     print("It has been", td, "since the file was modified")
     print("Or,", td.total_seconds(), "seconds")
-  
+
+
 if __name__ == "__main__":
     main()

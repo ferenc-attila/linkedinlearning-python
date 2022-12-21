@@ -11,7 +11,7 @@ mystr = "This is a string"
 mybool = True
 mylist = [0, 1, "two", 3.2, False]
 mytuple = (0, 1, 2)
-mydict = {"one" : 1, "two" : 2}
+mydict = {"one": 1, "two": 2}
 
 print(myint)
 print(myfloat)
@@ -44,12 +44,15 @@ print(mydict['one'])
 print('string type' + str(123))
 
 # Global vs. local variables in functions
-def someFunction():
+
+
+def some_function():
     global mystr
     mystr = 'def'
     print(mystr)
 
-someFunction()
+
+some_function()
 print(mystr)
 
 del mystr
